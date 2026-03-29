@@ -16,3 +16,24 @@ public:
         return (char)sum;
     }
 };
+
+
+
+
+
+/////// OTHER WAY USING XOR
+
+
+// class Solution {
+// public:
+//     char findTheDifference(string s, string t) {
+//     int XOR = 0;
+//     for(char &num : s){
+//         XOR ^= num ; 
+//     }
+//     for(char &num : t){
+//         XOR ^= num;
+//     }
+//    return (char)XOR;
+//     }
+// };

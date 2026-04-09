@@ -1,5 +1,6 @@
-class Solution {
-public:
+    #include <iostream>
+    #include <string>
+    using namespace std;
     int lengthOfLastWord(string s) {
      int n = s.length();
      string previous_str = "";
@@ -13,4 +14,10 @@ public:
     }
     return previous_str.length() ;
     }
-};
+    int main (){
+
+   string s = "Hello world";
+   cout << lengthOfLastWord(s);
+
+    }
+

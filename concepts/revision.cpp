@@ -81,23 +81,50 @@
 
 // ARRAY IS SORTED CHECK 
 
+// #include <iostream>
+// using namespace std;
+
+// int sortedarray(int arr[],int n ){
+//     for(int i = 1 ; i <= n-1 ; i++){
+//         if(arr[i-1] <= arr[i]){
+            
+//         }
+//         else{
+//             return false;
+//         }
+//     }
+//     return true;
+// }
+// int main(){
+
+//     int arr[] = {1,2,3,4};
+//     int n = sizeof(arr)/sizeof(int);
+//     cout << sortedarray(arr,n);
+// }
+
+
+
+//Remove duplicate from the array 
+
 #include <iostream>
 using namespace std;
+int removeduplicates(int arr[], int n ){
+  int i = 0 ;
+  for(int j = 1 ; j <= n-1 ; j++){
+  if(arr[i]!= arr[j]){
+    arr[i+1] = arr[j];
+    i++;
+  }
+  }
 
-int sortedarray(int arr[],int n ){
-    for(int i = 1 ; i <= n-1 ; i++){
-        if(arr[i-1] <= arr[i]){
-            
-        }
-        else{
-            return false;
-        }
-    }
-    return true;
+  return i+1;
 }
-int main(){
-
-    int arr[] = {1,2,3,4};
-    int n = sizeof(arr)/sizeof(int);
-    cout << sortedarray(arr,n);
+int main (){
+ int arr[] = {1,1,2,2,2,3,3};
+ int n = sizeof(arr)/sizeof(int);
+ int newsize = removeduplicates(arr,n);
+ for(int i = 0 ; i < newsize ; i++){
+ cout << arr[i] << " ";
+ }
+ 
 }

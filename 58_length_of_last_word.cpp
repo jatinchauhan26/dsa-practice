@@ -20,7 +20,3 @@
    cout << lengthOfLastWord(s);
 
     }
-
-
-
-    1929

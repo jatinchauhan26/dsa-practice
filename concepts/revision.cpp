@@ -18,6 +18,9 @@
 // }
 
 
+
+
+
 //Largest element in an array 
 
 // int largerelement(int arr[],int n ){
@@ -48,6 +51,8 @@
 // cout << largerelement(arr,n);
 
 // }
+
+
 
 
 
@@ -106,25 +111,123 @@
 
 //Remove duplicate from the array 
 
+// #include <iostream>
+// using namespace std;
+// int removeduplicates(int arr[], int n ){
+//   int i = 0 ;
+//   for(int j = 1 ; j <= n-1 ; j++){
+//   if(arr[i]!= arr[j]){
+//     arr[i+1] = arr[j];
+//     i++;
+//   }
+//   }
+
+//   return i+1;
+// }
+// int main (){
+//  int arr[] = {1,1,2,2,2,3,3};
+//  int n = sizeof(arr)/sizeof(int);
+//  int newsize = removeduplicates(arr,n);
+//  for(int i = 0 ; i < newsize ; i++){
+//  cout << arr[i] << " ";
+//  }
+ 
+// }
+
+
+
+
+
+// #include<iostream>
+// using namespace std ;
+// void removeduplicates(int arr[],int n){
+//   int i = 0;
+// for(int j = 1 ; j < n ; j++){
+// if(arr[i] != arr[j]){
+//    arr[i+1] = 
+// }
+
+// }
+
+
+
+// }
+
+
+
+
+// int main (){
+//  int arr[] = {1,1,2,2,2,3,3};
+//  int n = sizeof(arr)/sizeof(int);
+// }
+
+
+
+// #include <iostream>
+// using namespace std;
+// int even_odd(int n , int arr[]) {
+// for(int i = 0 ; i < n ; i++){
+//     if(arr[i]%2 == 0){
+//         cout << arr[i] << " is even" << "\n" ;
+//     }
+//     else {
+//         cout << arr[i] << " is odd " << endl;
+//     }
+// }
+// return 0;
+// }
+// int main(){
+// int arr[] = {1,4,3,8,15};
+// int n = sizeof(arr)/sizeof(int);
+// even_odd(n,arr);
+// return 0;
+// }
+
+
+// #include <iostream>
+// using namespace std;
+// int main(){
+// int n ;
+// cout << "Enter a number ";
+// cin >> n;
+
+// if(n%2 == 0 ){
+//     cout << "no is even";
+// }
+// else{
+//     cout << "no is odd";
+// }
+
+
+// }
+
+
+
+
+
+
+
+
 #include <iostream>
 using namespace std;
-int removeduplicates(int arr[], int n ){
-  int i = 0 ;
-  for(int j = 1 ; j <= n-1 ; j++){
-  if(arr[i]!= arr[j]){
-    arr[i+1] = arr[j];
-    i++;
-  }
-  }
+int function(int n , int arr[]){
+ int i=0;
+ for(int j = 1; j < n ; j++){
+ if(arr[i] != arr[j]){
+  arr[i+1] = arr[j];
+  i++;
+ }
 
-  return i+1;
+}
+return i+1;
+
 }
 int main (){
- int arr[] = {1,1,2,2,2,3,3};
+ int arr[] = {9,5,5,3,6,2,2,4,4,4};
  int n = sizeof(arr)/sizeof(int);
- int newsize = removeduplicates(arr,n);
+ int newsize =  function(n,arr);
+
  for(int i = 0 ; i < newsize ; i++){
- cout << arr[i] << " ";
+    cout << arr[i] << " ";
  }
- 
 }

@@ -206,28 +206,216 @@
 
 
 
+//Remove the duplicates 
+
+
+// #include <iostream>
+// using namespace std;
+// int function(int n , int arr[]){
+//  int i=0;
+//  for(int j = 1; j < n ; j++){
+//  if(arr[i] != arr[j]){
+//   arr[i+1] = arr[j];
+//   i++;
+//  }
+
+// }
+// return i+1;
+
+// }
+// int main (){
+//  int arr[] = {9,5,5,3,6,2,2,4,4,4};
+//  int n = sizeof(arr)/sizeof(int);
+//  int newsize =  function(n,arr);
+
+//  for(int i = 0 ; i < newsize ; i++){
+//     cout << arr[i] << " ";
+//  }
+// }
+
+
+
+// Find the sum of digits in a number
+
+// #include <iostream>
+// using namespace std;
+// int main(){
+//     int i = 0;
+//     int sum = 0;
+//     int n;
+//     cout << "enter the number";
+//     cin >> n ;
+//    while (n>0)
+//    {
+//     int last_digit = n % 10 ;
+//     n = n/10;
+//     sum = last_digit + sum ;
+//    }
+//    cout << sum ;
+// }
+
+
+
+// Count the number of digits in a number 
+
+// #include <iostream>
+// using namespace std;
+// int main(){
+//  int count = 0;
+//  int n = 8922;
+//  while(n>0){
+//     n = n/10;
+//     count++ ;
+//  }
+//  cout << count ;
+// }
+
+
+// Find the largest of three numbers.
+
+// #include <iostream>
+// using namespace std;
+// int main() {
+// int arr[] = {1,8,9,11,11} ;
+// int n = sizeof(arr)/sizeof(int);
+// int larger = INT8_MIN;
+// for(int i = 0 ; i < n ; i++){
+//    if(arr[i]>larger){
+//       larger = arr[i];
+//    }
+   
+// }
+// cout << larger;
+// }
+
+
+
+
+
+
+///////REVISION 
+
+// Count the number of digits in a number  
+
+// #include <iostream>
+// using namespace std;
+
+// int main() {
+//    int count = 0 ;
+// int n = 2005 ;
+// while(n>0){
+//    int l_d = n % 10 ;
+//    n = n/10;
+//    count++ ;
+// }
+// cout << count ;
+// }
+
+
+
+// #include <iostream>
+// using namespace std;
+
+// int main() {
+// int sum = 0 ;
+
+// int n = 2085 ;
+// while(n>0){
+// int  l_d = n % 10 ;   
+//  n = n/10;
+//  sum = sum + l_d ;
+// }
+// cout << sum ; 
+
+
+// }
+
+//Second Larger Element in an array 
+
+// #include <iostream>
+// using namespace std;
+// int main (){
+//    int larger = 0 ;
+//    int secondlarger = 0;
+//    int arr[]= {5,7,6,9,3,3,11,55,34,4};
+//    int n = sizeof(arr)/sizeof(int);
+//    for(int i = 0 ; i < n ; i++){
+//       if(arr[i]>larger){
+//          secondlarger = larger ;
+//          larger = arr[i];
+//       }
+//       else if(arr[i] > secondlarger){
+//          secondlarger = arr[i];
+//       }
+//    }
+//    cout << secondlarger ; 
+// }
+
+
+// Reverse an array 
+
+// #include <iostream>
+// using namespace std;
+// int main (){
+//    int arr[]= {5,7,6,9,3,3,11,55,34,4};
+//    int n = sizeof(arr)/sizeof(int);
+//    int i = 0 ;
+//    int j = n-1;
+//   while ((i<j))
+//   {
+//    swap(arr[i],arr[j]);
+//    i++;
+//    j--;
+//   }
+//   for(int i= 0 ; i < n-1 ; i++){
+//    cout << arr[i] << " " ;
+//   }
+
+// }
+
+
+
+// Reverse an number 
+
+// #include <iostream>
+// using namespace std;
+
+// int main() {
+//     int number = 62736782;
+//     int reverse = 0;
+
+//     while(number > 0) {
+//         int last_digit = number % 10;
+
+//         reverse = reverse*10 + last_digit ;
+
+//         number = number / 10;
+//     }
+
+//     cout << reverse;
+// }
+
+
+
+// Remove duplicates 
 
 
 #include <iostream>
 using namespace std;
-int function(int n , int arr[]){
- int i=0;
- for(int j = 1; j < n ; j++){
- if(arr[i] != arr[j]){
-  arr[i+1] = arr[j];
-  i++;
- }
 
-}
-return i+1;
+int main() {
+int arr[] = {9,5,5,3,6,2,2,4,4,4};
+int n = sizeof(arr)/sizeof(int); 
+int i = 0 ; 
+for(int j=1 ; j < n ; j++){
+    if(arr[i] != arr[j]){
+      arr[i+1] = arr[j];
+      i++;
+    }
+      }
+     int newsize = i + 1 ;
+     for(int i= 0 ; i < newsize ; i++){
+   cout << arr[i] << " " ;
+  }
 
-}
-int main (){
- int arr[] = {9,5,5,3,6,2,2,4,4,4};
- int n = sizeof(arr)/sizeof(int);
- int newsize =  function(n,arr);
-
- for(int i = 0 ; i < newsize ; i++){
-    cout << arr[i] << " ";
- }
 }

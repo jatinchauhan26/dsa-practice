@@ -163,19 +163,95 @@
 // }
 
 
+
+//Print even digits ::
+// #include <iostream>
+// using namespace std;
+
+// long long n = 3248957239;
+
+// int main(){
+//     while(n > 0){
+//         int ld = n % 10;
+
+//         if(ld % 2 == 0){
+//             cout << ld << " ";
+//         }
+
+//         n = n / 10;
+//     }
+// }
+
+
+//Products of digits 
+
+// #include <iostream>
+// using namespace std;
+// int main(){
+//     int n = 545;
+//     int mul = 1;
+//     while(n>0){
+//         int ld = n%10;
+//         mul *= ld;
+//         n = n/10;
+//     }
+//     cout << mul;
+// }
+
+//Reverse the number 
+// #include <iostream>
+// using namespace std;
+// int main(){
+//     int n = 5452342;
+//     int rev = 0;
+//     while(n>0){
+//         int rem = n%10;
+//          n = n/10;
+//         rev = rev*10 + rem ;
+     
+//     }
+//     cout << rev;
+// }
+
+
+//Palindrome number
+// #include <iostream>
+// using namespace std;
+// int rev = 0;
+// int palindrome(int n){
+    
+//     while(n>0){
+//         int rem = n%10;
+//          n = n/10;
+//          rev = rev*10+rem;
+//     }
+//     return rev;
+// }
+// int main(){
+//     int n = 3456543;
+//     int v = palindrome(n);
+//     if(v==n){
+//        cout << "no. is palindrome";
+//     }
+//     else {
+//         cout << "no. is not palindrome";
+//     }
+// }
+
+
+
+//smallest digit in a number
 #include <iostream>
 using namespace std;
-
-long long n = 3248957239;
-
 int main(){
-    while(n > 0){
-        int ld = n % 10;
-
-        if(ld % 2 == 0){
-            cout << ld << " ";
+    int n = 798254;
+    int smallest = INT_FAST8_MAX;
+    while(n>0){
+        int ld = n%10;
+        if(ld<smallest){
+            smallest = ld;
         }
-
-        n = n / 10;
+        n = n/10;
     }
+    cout << smallest;
 }

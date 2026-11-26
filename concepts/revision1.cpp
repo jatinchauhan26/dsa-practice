@@ -241,17 +241,73 @@
 
 
 //smallest digit in a number
+// #include <iostream>
+// using namespace std;
+// int main(){
+//     int n = 798254;
+//     int smallest = INT_FAST8_MAX;
+//     while(n>0){
+//         int ld = n%10;
+//         if(ld<smallest){
+//             smallest = ld;
+//         }
+//         n = n/10;
+//     }
+//     cout << smallest;
+// }
+
+
+//armstrong
+
+
+// #include <iostream>
+// #include <cmath>
+// using namespace std;
+// int main(){
+//     int n = 153;
+//     int temp = n;
+//     int original = n;
+//     int sum = 0;
+//     int count = 0;
+
+//     while(temp>0){
+//         temp = temp/10;
+//         count++;
+//     }
+//     while(n>0){
+//         int ld = n%10;
+//         sum += round(pow(ld,count));
+//         n = n/10;
+//     }
+//    if(sum == original) {
+//     cout << " no. is armstrong number";
+//    }
+//    else {
+//     cout << "not armstrong";
+//    }
+// }
+
+
 #include <iostream>
 using namespace std;
-int main(){
-    int n = 798254;
-    int smallest = INT_FAST8_MAX;
+int main () {
+    int n = 145;
+    
+    int original = n;
+    int sum = 0;
     while(n>0){
-        int ld = n%10;
-        if(ld<smallest){
-            smallest = ld;
+        int fact = 1;     //because calculating for each digit factorial
+        int ld = n % 10;
+        for(int i = 1 ; i <= ld ; i++){
+            fact *= i;
         }
+        sum += fact;
         n = n/10;
     }
-    cout << smallest;
+    if(sum == original ){
+        cout << "no. is strong no.";
+    }
+    else {
+        cout << "not strong no.";
+    }
 }

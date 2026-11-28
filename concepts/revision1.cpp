@@ -288,26 +288,90 @@
 // }
 
 
-#include <iostream>
-using namespace std;
-int main () {
-    int n = 145;
+// #include <iostream>
+// using namespace std;
+// int main () {
+//     int n = 145;
     
-    int original = n;
-    int sum = 0;
-    while(n>0){
-        int fact = 1;     //because calculating for each digit factorial
-        int ld = n % 10;
-        for(int i = 1 ; i <= ld ; i++){
-            fact *= i;
-        }
-        sum += fact;
-        n = n/10;
-    }
-    if(sum == original ){
-        cout << "no. is strong no.";
-    }
-    else {
-        cout << "not strong no.";
-    }
+//     int original = n;
+//     int sum = 0;
+//     while(n>0){
+//         int fact = 1;     //because calculating for each digit factorial
+//         int ld = n % 10;
+//         for(int i = 1 ; i <= ld ; i++){
+//             fact *= i;
+//         }
+//         sum += fact;
+//         n = n/10;
+//     }
+//     if(sum == original ){
+//         cout << "no. is strong no.";
+//     }
+//     else {
+//         cout << "not strong no.";
+//     }
+// }
+
+
+
+///Count the digits that divides a number
+
+// class Solution {
+// public:
+//     int countDigits(int num) {
+//         int original = num;
+//          int count = 0;
+//         while(num>0){
+//            int ld = num%10;
+//            if(ld!= 0 && original % ld == 0){
+//               count ++;
+//            }
+//            num = num/10;
+//         }
+//         return count ;
+//     }
+// };
+
+
+
+// 1342. Number of Steps to Reduce a Number to Zero
+// class Solution {
+// public:
+//     int numberOfSteps(int num) {
+//       int steps = 0;
+//       while(num>0){
+//       if(num%2 == 0){
+//         num = num/2;
+//         steps++;
+//       }
+//       else {
+//         num = num - 1;
+//         steps++;
+//       }}
+//       return steps;
+//     }
+// };
+
+
+
+
+
+
+#include<iostream>
+using namespace std;
+int main(){
+ int n = 129;
+ int original = n;
+ int rev = 0;
+ while(n>0){
+   int  ld = n%10;
+   rev = rev*10 + ld;
+   n = n / 10;
+ }
+ if(rev == original){
+ cout << "no. is palindrome ";
+ }
+ else {
+    cout << "no is not palindrome";
+ }
 }
